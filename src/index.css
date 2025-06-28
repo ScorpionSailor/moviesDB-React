@@ -6,6 +6,7 @@
 .loader {
           position: relative;
           display: flex;
+          margin: 10% 0% 10% 46.5%;
         }
 .loader:before , .loader:after {
     content: '';
@@ -79,6 +80,10 @@
   header img {
     @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
+
+  button{
+    @apply bg-dark-100 text-light-100 px-3 py-1.5 rounded-lg shadow-inner shadow-light-100/10;
+  }
 }
 
 @layer components {
@@ -110,6 +115,66 @@
     }
   }
 
+  .movie-details {
+    @apply bg-light-100/5 px-5 py-12 xs:p-10 max-w-6xl mx-auto flex flex-col gap-5 relative z-10;
+  }
+
+  .Details {
+    @apply flex flex-col gap-5 md:pr-55;
+
+    & h4 {
+      @apply text-gray-100 font-medium text-base;
+    }
+    
+    & p{
+      @apply inline-block bg-light-100/5 px-3 py-0.5 rounded-lg max-w-3xl mx-auto text-nowrap;
+    }
+  }
+
+
+  .Header{
+
+    @apply flex justify-between items-center; 
+
+    & .content {
+      @apply mt-5 flex flex-row items-center flex-wrap gap-2;
+    }
+
+    & .rating {
+      @apply bg-dark-100 text-light-100 px-3 py-1.5 rounded-lg shadow-inner shadow-light-100/10;
+
+      @apply flex flex-row items-center gap-1;
+    }
+
+    & .rating img {
+      @apply size-4 object-contain;
+    }
+
+    & .rating p {
+      @apply font-bold text-base text-white;
+    }
+
+    & .content span {
+      @apply text-sm text-gray-100;
+    }
+
+    & .content .lang {
+      @apply capitalize text-gray-100 font-medium text-base;
+    }
+
+    & .content .year {
+      @apply text-gray-100 font-medium text-base;
+    }
+  }
+
+  .posters{
+    @apply grid grid-cols-4 grid-rows-1 gap-5;
+
+    & img {
+      @apply rounded-lg h-full w-full;
+    }
+  }
+
   .search {
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
 
@@ -135,10 +200,6 @@
   }
   .page-scroller{
     @apply text-white flex items-center gap-2 md:gap-5;
-
-    & button {
-      @apply bg-dark-100 px-3 py-1.5 rounded-lg shadow-inner shadow-light-100/10;
-    }
 
     & p {
       @apply bg-dark-100 px-3 py-1.5 rounded-lg shadow-inner shadow-light-100/10

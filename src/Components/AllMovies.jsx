@@ -1,4 +1,6 @@
 import Card from './Card'
+import { Link } from 'react-router-dom'
+
 
 const AllMovies = ({ MovieList }) => {
   return (
@@ -8,7 +10,9 @@ const AllMovies = ({ MovieList }) => {
       ) : (
         <ul>
           {MovieList.map((movie)=>(
-            <Card key={movie.id} movie = {movie} />
+            <Link key={movie.id} to={`/DetailedCard/${movie.id}`}>
+              <Card key={movie.id} movie = {movie} />
+            </Link>
           ))}
         </ul>
       )}
