@@ -46,7 +46,6 @@ const DetailedCard = () => {
           setErrorMessage(data.Error || 'Error fetching movie details');
           setMovieDetails([]);
         }else{
-          console.log(data);
           setMovieDetails(data || []);
         }
       }
