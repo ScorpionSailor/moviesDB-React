@@ -35,7 +35,6 @@ const Home = () => {
           setErrorMessage(data.Error || 'Error fetching movies');
           setMovieList([]);
         }
-        console.log(data);
         setMovieList(data.results || []);
       }
 
